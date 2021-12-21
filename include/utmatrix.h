@@ -335,7 +335,7 @@ TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType> &mt)
 {
 	if (this != &mt)
 	{
-		*((TVector<TVector<ValType> >*)this) = *((const TVector<TVector<ValType> >*)&mt);
+		((TVector<TVector<ValType> >*)this)->operator=(mt);
 	}
 	return *this;
 } /*-------------------------------------------------------------------------*/
